@@ -40,9 +40,10 @@ export default ({ users }) =>
                     <Grid item xl={12} >
                     <div>
                             <Input
-                                defaultValue="Hello world"
+                                defaultValue="Search for Songs"
+                                fullWidth 
                                 inputProps={{
-                                    'aria-label': 'Description',
+                                    'aria-label': 'Description',     
                                 }}
                             />
                         </div>
@@ -57,12 +58,12 @@ export default ({ users }) =>
                                             src={`/static/images/avatar/${value + 1}.jpg`}
                                         />
                                     </ListItemAvatar>
-                                    <ListItemText primary={`Line item ${value + 1}_______________`} />
+                                    <ListItemText primary={`Line item ${value + 1}`} />
                                     <ListItemSecondaryAction>
-                                    <IconButton aria-label="AddUsers">
+                                    <IconButton aria-label="AddUsers" onClick= {() => alert('Will Add Song to favorites list')}>
                                             <Favorite/>
                                         </IconButton>
-                                        <IconButton aria-label="AddUsers">
+                                        <IconButton aria-label="AddUsers" onClick= {() => alert('Will add song to player')}>
                                             <AddIcon />
                                         </IconButton>
                                     </ListItemSecondaryAction>
@@ -99,7 +100,7 @@ export default ({ users }) =>
                         <ListItem key={index} role={undefined} dense>
                             <ListItemText primary={value} />
                             <ListItemSecondaryAction>
-                                <IconButton aria-label="AddUsers">
+                                <IconButton aria-label="AddUsers" onClick= {() => alert('Will add user to party')}>
                                     <AddIcon />
                                 </IconButton>
                             </ListItemSecondaryAction>

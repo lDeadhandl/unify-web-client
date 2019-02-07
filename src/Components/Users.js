@@ -1,5 +1,6 @@
 
 
+//tested get and post calls to unify api
 export default props =>
 
 // fetch('https://localhost:44395/api/Values')
